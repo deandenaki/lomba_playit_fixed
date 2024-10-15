@@ -8,8 +8,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
 <body class="font-jakarta">
+    
+    <nav class="bg-white fixed w-full z-20 ">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3">
+                <img src="assets/img/medium.png" class="h-8" alt="logo">
+                <span class="self-center text-2xl font-semibold text-black">Gumo</span>
+            </a>
+            <div class="flex md:order-2">
+                <button type="button" class="text-white bg-gray-900 font-medium rounded-lg text-sm px-4 py-2">Contact Us</button>
+                <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-black rounded-lg bg-white md:space-x-8 md:flex-row md:mt-0 md:border-0">
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-black rounded">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-black rounded">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-black rounded">Services</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
     <div class="navbar w-full h-24 flex">
         <div class="nav-left w-1/3 h-full flex justify-center items-center font-semibold">
             <h1>Gumo</h1>
@@ -28,7 +62,7 @@
     <!-- container home -->
     <div class="container-home w-full md:h-screen h-full bg-black md:flex text-white">
         <div class="container-left w-2/3 h-full pt-24 pl-14">
-            <h1 class="text-6xl font-bold">Menjelajahi Keindahan <br>Dari Bromo</h1>
+            <h1 class="sm:text-5xl font-bold md:text-6xl">Menjelajahi Keindahan <br>Dari Bromo</h1>
             <p class="text-xl mt-3.5 mb-9">Bromo bukan hanya sekadar berjalan-jalan ke tempat baru <br> Ini tentang pengalaman yang anda dapatkan</p>
             <a href="#">View All</a>
             <p class="md:mt-64">Gunung Bromo di Jawa Timur terkenal dengan pemandangan matahari terbitnya yang indah. <br>Dikelilingi lautan pasir dan kabut, gunung ini memiliki makna spiritual bagi suku Tengger yang <br>rutin mengadakan upacara adat.</p>
@@ -43,5 +77,15 @@
         </div>
         <div class="about-right w-1/2 h-full flex justify-center items-center"></div>
     </div>
+
+    <script>
+        // Toggle the hidden class for mobile menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbarSticky = document.getElementById('navbar-sticky');
+
+        menuToggle.addEventListener('click', () => {
+            navbarSticky.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
